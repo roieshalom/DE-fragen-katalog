@@ -156,7 +156,6 @@ export default function App() {
     logAnalyticsEvent("stats_modal_opened");
   };
 
-  // ZZZ_FINAL_TEST_123 - In render tree
   return (
     <div className="app-wrapper">
       <header className="app-header">
