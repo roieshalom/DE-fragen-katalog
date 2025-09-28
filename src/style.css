@@ -84,7 +84,7 @@ html, body {
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* Use flex-end for bottom-aligned, or baseline for text line-up */
+  align-items: baseline; /* I tested in Inspect */
 }
 
 .header-links {

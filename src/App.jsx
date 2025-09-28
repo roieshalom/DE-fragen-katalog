@@ -161,9 +161,7 @@ export default function App() {
     <div className="app-wrapper">
       <header className="app-header">
         <div className="header-inner">
-          <div className="header-titles">
-            <h1 className="app-title">Fragen Katalog</h1>
-          </div>
+          <h1 className="app-title">Fragen Katalog</h1>
           <div className="header-links">
             {SHOW_STATS && (
               <a href="#" className="about-link" onClick={(e) => { e.preventDefault(); openStatsModal(); }}>
