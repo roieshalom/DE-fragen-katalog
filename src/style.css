@@ -84,13 +84,14 @@ html, body {
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline; /*This aligns text baselines, usually best for nav bars*/
+  align-items: flex-end; /* Use flex-end for bottom-aligned, or baseline for text line-up */
 }
 
 .header-links {
-  display: flex;
-  gap: 0px;
-  padding-top: 0px; /*change from 8px to 0px*/
+    display: flex;
+    gap: 0;
+    padding-top: 0;               /* Ensure no extra padding */
+    align-items: flex-end;        /* Add this for bottom link alignment */
 }
 
 .header-content {
@@ -101,14 +102,19 @@ html, body {
 }
 
 .header-titles {
-  display: flex;
-  flex-direction: column;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    /* Add this line */
 }
 
 .app-title {
-  margin: 0;
-  font-size: 20px;
-  font-weight: normal;
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    align-self: flex-end;         /* Add this line */
 }
 
 .about-link {
