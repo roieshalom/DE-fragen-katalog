@@ -84,13 +84,13 @@ html, body {
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: baseline; /*This aligns text baselines, usually best for nav bars*/
 }
 
 .header-links {
   display: flex;
   gap: 0px;
-  padding-top: 8px;
+  padding-top: 0px; /*change from 8px to 0px*/
 }
 
 .header-content {
