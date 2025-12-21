@@ -42,16 +42,24 @@ export default function Flashcard({
 
     try {
       const messages = [
-        {
-          role: "system",
-          content:
-            "You are a tutor for the German Einbürgerungstest. Explain clearly in short English answers at B1 level."
-        },
-        {
-          role: "user",
-          content: `Explain this question and the correct answer in simple English: "${question}"`
-        }
-      ];
+          {
+    role: "system",
+    content:
+      "You are a friendly tutor for the German Einbürgerungstest. " +
+      "Explain clearly in short in English " +
+      "Translate the question, then give a brief explanation of the topic and the key ideas. " +
+      "Do NOT say directly which answer option is correct. " +
+      "Instead, give hints that help the learner think and recognise the right answer on their own."
+  },
+  {
+    role: "user",
+    content: `Here is a multiple-choice question from the German Einbürgerungstest.\n` +
+             `Question: "${question}"\n` +
+             `Options: ${answers.join(" | ")}\n\n` +
+             "Explain what the question is about, translate it, and describe the important background in a neutral way. " +
+             "Give subtle hints but do not name the correct option explicitly."
+  }
+];
 
       const res = await fetch("https://einbuergerung-ai-api.onrender.com/chat", {
         method: "POST",
