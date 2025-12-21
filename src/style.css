@@ -40,7 +40,7 @@ html, body {
   overscroll-behavior-y: contain;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0; 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -287,15 +287,13 @@ button.controls-disabled {
   z-index: -1;
   background: linear-gradient(
     120deg,
-    #38bdf8,
     #a855f7,
-    #22c55e,
-    #38bdf8
+    #04f2ff
   );
   background-size: 250% 250%;
   filter: blur(18px);
   opacity: 0.8;
-  animation: aiSlide 12s ease-in-out infinite;
+  animation: aiSlide 10s ease-in-out infinite;
 }
 
 @keyframes aiSlide {
