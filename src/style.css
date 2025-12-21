@@ -260,6 +260,57 @@ button.controls-disabled {
   color: var(--color-muted-light);
 }
 
+/* === AI Button === */
+
+.ai-explain-button {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: none;
+  background: #0b1120;        /* dark pill */
+  color: #f9fafb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Moving foggy gradient inside the button */
+.ai-explain-button::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    #38bdf8,
+    #a855f7,
+    #22c55e,
+    #38bdf8
+  );
+  background-size: 250% 250%;
+  filter: blur(18px);
+  opacity: 0.8;
+  animation: aiSlide 12s ease-in-out infinite;
+}
+
+@keyframes aiSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 /* === Streak Bar === */
 .streak-wrapper {
   margin-top: 10px;

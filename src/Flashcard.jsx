@@ -134,7 +134,7 @@ export default function Flashcard({
           <div style={{ marginTop: "1rem" }}>
             <button
               type="button"
-              className="answer-button text-base"
+              className="ai-explain-button"
               onClick={handleAskAI}
             >
               ✨ AI explains
