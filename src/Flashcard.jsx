@@ -44,22 +44,25 @@ export default function Flashcard({
       const messages = [
           {
     role: "system",
-    content:
-      "You are a friendly tutor for the German Einbürgerungstest. " +
-      "Explain clearly in short in English " +
-      "Translate the question, then give a brief explanation of the topic and the key ideas. " +
-      "Do NOT say directly which answer option is correct. " +
-      "Instead, give hints that help the learner think and recognise the right answer on their own."
-  },
-  {
-    role: "user",
-    content: `Here is a multiple-choice question from the German Einbürgerungstest.\n` +
-             `Question: "${question}"\n` +
-             `Options: ${answers.join(" | ")}\n\n` +
-             "Explain what the question is about, translate it, and describe the important background in a neutral way. " +
-             "Give subtle hints but do not name the correct option explicitly."
-  }
-];
+      content:
+            "You are a friendly tutor for the German Einbürgerungstest. " +
+            "Explain clearly in short English at about B1 level. " +
+            "Your job is to give a brief, neutral paragraph of general background knowledge " +
+            "about the topic of the question. Do not say which answer is correct, " +
+            "do not discuss the answer options, and do not tell the reader what to choose."
+        },
+        {
+          role: "user",
+          content:
+            `Here is a multiple-choice question from the German Einbürgerungstest.\n` +
+            `Question: "${question}"\n\n` +
+            "First translate the question into simple English in one sentence. " +
+            "Then, in 3–5 short sentences, describe the topic in general: what it is, " +
+            "why it matters, and any key facts someone should know. " +
+            "Do not mention the answer options. Do not say which answer is correct. " +
+            "Just give general background knowledge."
+        }
+      ];
 
       const res = await fetch("https://einbuergerung-ai-api.onrender.com/chat", {
         method: "POST",
