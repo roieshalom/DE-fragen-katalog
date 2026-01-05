@@ -261,22 +261,19 @@ button.controls-disabled {
 }
 
 /* === AI Button === */
-
 .ai-explain-button {
-  position: relative;
-  z-index: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.25rem;
-  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
   border: none;
-  background: #0b1120;        /* dark pill */
+  border-radius: 9999px; /* pill */
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
   color: #f9fafb;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* Moving foggy gradient inside the button */
