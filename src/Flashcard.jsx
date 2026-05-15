@@ -134,7 +134,7 @@ export default function Flashcard({
           </div>
 
           {/* Ask AI button */}
-          <div style={{ marginTop: "1rem" }}>
+          {/* <div style={{ marginTop: "1rem" }}>
             <button
               type="button"
               className="ai-explain-button"
@@ -142,7 +142,7 @@ export default function Flashcard({
             >
               ✨ AI explains
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="question-meta text-sm text-muted-light">
