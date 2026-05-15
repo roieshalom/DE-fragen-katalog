@@ -46,7 +46,7 @@ export default function StreakProgressBar({ streak, triggerCelebration, onResetS
           transition={{ duration: 0.4 }}
         />
         <div className="streak-bar-content">
-          <span className="streak-text">17 richtige Fragen</span>
+          <span className="streak-text">17 Richtige Antworten</span>
           {isFull && (
             <button className="streak-reset-inline" onClick={onResetStreak}>
               Reset
